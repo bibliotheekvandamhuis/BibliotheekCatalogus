@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Catalogus bibliotheek Van Dam Huis</title>
+        <link rel="stylesheet" href="style.css">
+<script src="jquery-3.7.0.min.js"></script>
+    </head>
+    <body>
+<article>
+<header class="entry-header alignwide">
+<h1 class="entry-title">Bibliotheek catalogus</h1> </header>
+<div class="entry-content">
+<p>Terug naar de <a href="https://antroposofiehaarlem.nl/bibliotheek" data-type="page" data-id="201">bibliotheek</a>.</p>
+<p>U kunt hier zoeken in de catalogus van de bibliotheek om te zien of wij een bepaald boek hebben.</p>
+<ul>
+<li>Er wordt gezocht op het voorkomen van alle zoektermen in hetzij de naam van de auteur, de titel van het boek of categorie van het boek. U kunt dus bijvoorbeeld ook op een deel van de titel zoeken. Er wordt gezocht op hele woorden. Wil je zoeken op het voorkomen van een deel van de zoekterm in een woord dan laat je de zoekterm vooraf gaan door ~. Voorbeeld: met ~karm vindt je zowel Karma als karmische.</li>
+<li>Het zoeken is niet gevoelig voor hoofdletters of kleine letters. Dus met een zoekterm als karma vindt je zowel Karma als karma.</li>
+<li>Je kunt zoeken in een of meerdere categorieën. Als je geen categorie aanvinkt wordt in alles gezocht. Als je een of meerdere categorieën hebt aangevinkt dan wordt een boek gevonden als het tenminste 1 van de aangevinkte categorieën heeft.</li>
+<li>Zoekresultaten worden gesorteerd op auteur en titel.</li>
+</ul>
+
+<p></p>
+<p>Aantal boeken in de catalogus: <span id="bookcount"></span>.</p>
+<fieldset id="categoryfilter"><legend>Zoeken in een of meerdere categorieën</legend>
+<p>Als je geen categorie aanvinkt wordt in de hele catalogus gezocht.</p>
+<label><input type="checkbox" id="antroposofie"><span>antroposofie</span></label>
+<label><input type="checkbox" id="geneeskunde"><span>geneeskunde</span></label>
+<label><input type="checkbox" id="innerlijke_ontwikkeling"><span>innerlijke ontwikkeling</span></label>
+<label><input type="checkbox" id="kunst"><span>kunst</span></label>
+<label><input type="checkbox" id="landbouw_en_voeding"><span>landbouw en voeding</span></label>
+<label><input type="checkbox" id="maatschappij"><span>maatschappij</span></label>
+<label><input type="checkbox" id="natuurwetenschappen"><span>natuurwetenschappen</span></label>
+<label><input type="checkbox" id="onderwijs_en_opvoeding"><span>onderwijs en opvoeding</span></label>
+<label><input type="checkbox" id="religie_en_filosofie"><span>religie en filosofie</span></label>
+<label><input type="checkbox" id="Steiner_NL"><span>Steiner NL</span></label>
+</fieldset>
+<style>
+        #categoryfilter label {white-space: nowrap;}
+        #categoryfilter {margin-bottom:1em;}
+        .catsortlabel {display:inline-block;margin-top:0.25em;white-space:nowrap;vertical-align:middle}
+        #catsort {width:auto !important;min-width:12em}
+
+    </style>
+<p><input type="text" id="search"> <button type="button" class="catalog-search" onclick="searchBook()" style="display:inline-block;color:white">Zoeken</button>
+<label class="catsortlabel">Sorteren op <select id="catsort">
+<option value="1" selected="selected">auteur en titel</option>
+<option value="4">Categorieën</option>
+<option value="2">boeknummer</option>
+<option value="3">GA nummer</option>
+</select></label>
+<span id="books-found"></span></p>
+<div id="grid"></div>
+<script type="text/javascript" src="bibliotheek-catalogus.js"></script>
+</div>
+
+</article> 
+<script src="app.js"></script>       
+    </body>
+</html>
